@@ -1,0 +1,63 @@
+:root {
+  --primary: #0e5e6f;
+}
+
+body {
+  color: var(--primary);
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.font-head {
+  font-family: 'Saira', sans-serif;
+}
+
+.font-body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-menu li:nth-of-type(1),
+.main-menu li:nth-of-type(2) {
+  border-right: 1px solid #ccc;
+  padding-right: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.flag li:nth-of-type(1) {
+  border-right: 1px solid #ccc;
+  padding-right: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.top-image {
+  width: 140px;
+  height: 210px;
+  background-image: url(../images/top_shape.png);
+  position: absolute;
+  left: 30px;
+  bottom: -172px;
+  z-index: 10000;
+}
+
+.contact-area {
+  background-color: #f1f6f9;
+}
+
+.contact-content {
+  background-image: url('../images/wave_shape.png'),
+    url('../images/right_shape.png');
+  background-repeat: no-repeat;
+  background-position: 0 95%, 100% 100%;
+}
+
+.form-wrapper {
+  background: url('../images/contact_shape.png') center center / cover no-repeat;
+  background-color: #0d3c55;
+  color: #fff;
+}
+
+.form-wrapper button {
+  background-color: #53aeff;
+}

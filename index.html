@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trademission</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Header start -->
+    <header class="header py-5 font-body">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <div class="logo">
+            <a href="#"><img src="images/logo.png" alt="trademission" /></a>
+          </div>
+
+          <nav class="main-menu">
+            <ul class="flex">
+              <li>
+                <a class="inline-block transition hover:underline" href="#"
+                  >Ministry of Foreign Affairs BD</a
+                >
+              </li>
+              <li>
+                <a class="inline-block transition hover:underline" href="#"
+                  >Embassy of Bangladesh in Netherlands
+                </a>
+              </li>
+              <li>
+                <a class="inline-block transition hover:underline" href="#"
+                  >Trademission Partners</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="flag flex items-center">
+            <li class="mr-2">
+              <a href="#"><img src="images/nl_flag.png" alt="nl" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/uk_flag.png" alt="en" /></a>
+            </li>
+            <li class="ml-6">
+              <a href="#" class="inline-block">
+                >> <span class="underline">Switch to BD</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Hero start -->
+    <section
+      class="hero relative"
+      style="
+        background: url('./images/hero_bgg.jpg') center center / cover no-repeat;
+        height: 650px;
+      "
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2">
+          <div class="text-white mt-96">
+            <h2 class="text-3xl font-head mb-5 font-semibold uppercase">
+              Destination BD
+            </h2>
+            <p class="font-body font-light max-w-md mb-7 text-sm">
+              Subscribe to our MailChimp newsletter and stay up to date with all
+              events coming straight in your mailbox...
+            </p>
+            <a
+              class="inline-block underline font-body font-light text-sm"
+              href="#"
+              >Read more</a
+            >
+          </div>
+
+          <div class="faqs mt-48">
+            <div class="mb-4" x-data="{ open: false }">
+              <div
+                @click="open = !open"
+                class="
+                  flex
+                  items-center
+                  justify-between
+                  bg-white
+                  p-4
+                  rounded-lg
+                "
+              >
+                <h3 class="font-head font-semibold text-xl">
+                  Did you know quick fact that
+                </h3>
+                <span
+                  :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  class="fas"
+                ></span>
+              </div>
+              <div
+                x-cloak
+                x-show="open"
+                x-transition.delay.50ms
+                class="bg-white rounded-lg p-4 font-body"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+            <div class="mb-4" x-data="{ open: false }">
+              <div
+                @click="open = !open"
+                class="
+                  flex
+                  items-center
+                  justify-between
+                  bg-white
+                  p-4
+                  rounded-lg
+                "
+              >
+                <h3 class="font-head font-semibold text-xl">
+                  More than 40 world class firms
+                </h3>
+                <span
+                  :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  class="fas"
+                ></span>
+              </div>
+              <div
+                x-cloak
+                x-show="open"
+                x-transition.delay.50ms
+                class="bg-white rounded-lg p-4 font-body"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+            <div class="mb-4" x-data="{ open: false }">
+              <div
+                @click="open = !open"
+                class="
+                  flex
+                  items-center
+                  justify-between
+                  bg-white
+                  p-4
+                  rounded-lg
+                "
+              >
+                <h3 class="font-head font-semibold text-xl">
+                  EDUCATIONS with practical output
+                </h3>
+                <span
+                  :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  class="fas"
+                ></span>
+              </div>
+              <div
+                x-cloak
+                x-show="open"
+                x-transition.delay.50ms
+                class="bg-white rounded-lg p-4 font-body"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+            <div x-data="{ open: false }">
+              <div
+                @click="open = !open"
+                class="
+                  flex
+                  items-center
+                  justify-between
+                  bg-white
+                  p-4
+                  rounded-lg
+                "
+              >
+                <h3 class="font-head font-semibold text-xl">
+                  Ease of doing business
+                </h3>
+                <span
+                  :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  class="fas"
+                ></span>
+              </div>
+              <div
+                x-cloak
+                x-show="open"
+                x-transition.delay.50ms
+                class="bg-white rounded-lg p-4 font-body"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos.
+                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
+                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
+                porta eu gravida ut, maximus non erat.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero end -->
+
+    <!-- About start -->
+    <section class="about-area relative py-16">
+      <img class="absolute top-0 right-0" src="images/hero_shape.png" alt="" />
+      <div class="container mx-auto px-4 pl-28">
+        <p class="uppercase font-medium font-head mb-12">
+          Learn About Tradmission
+        </p>
+
+        <h2 class="font-head text-4xl max-w-xl mb-10 font-semibold">
+          longer text explanation about the Trade mission and how it will happen
+          and when it is.
+        </h2>
+
+        <p class="font-body max-w-5xl font-light">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </section>
+    <!-- About end -->
+
+    <!-- Six start -->
+    <section class="six-area relative pt-20">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-3 gap-10">
+          <div class="relative">
+            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <div
+              class="
+                absolute
+                bottom-0
+                left-0
+                p-3
+                w-full
+                flex
+                justify-between
+                items-end
+                text-white
+              "
+            >
+              <h3 class="font-head text-xl font-medium">
+                Successful areas of <br />
+                ICT in BD
+              </h3>
+              <a class="font-body text-xs underline" href="#">Read more</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <div
+              class="
+                absolute
+                bottom-0
+                left-0
+                p-3
+                w-full
+                flex
+                justify-between
+                items-end
+                text-white
+              "
+            >
+              <h3 class="font-head text-xl font-medium">
+                Successful areas of <br />
+                ICT in BD
+              </h3>
+              <a class="font-body text-xs underline" href="#">Read more</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <div
+              class="
+                absolute
+                bottom-0
+                left-0
+                p-3
+                w-full
+                flex
+                justify-between
+                items-end
+                text-white
+              "
+            >
+              <h3 class="font-head text-xl font-medium">
+                Successful areas of <br />
+                ICT in BD
+              </h3>
+              <a class="font-body text-xs underline" href="#">Read more</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <div
+              class="
+                absolute
+                bottom-0
+                left-0
+                p-3
+                w-full
+                flex
+                justify-between
+                items-end
+                text-white
+              "
+            >
+              <h3 class="font-head text-xl font-medium">
+                Successful areas of <br />
+                ICT in BD
+              </h3>
+              <a class="font-body text-xs underline" href="#">Read more</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <div
+              class="
+                absolute
+                bottom-0
+                left-0
+                p-3
+                w-full
+                flex
+                justify-between
+                items-end
+                text-white
+              "
+            >
+              <h3 class="font-head text-xl font-medium">
+                Successful areas of <br />
+                ICT in BD
+              </h3>
+              <a class="font-body text-xs underline" href="#">Read more</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <div
+              class="
+                absolute
+                bottom-0
+                left-0
+                p-3
+                w-full
+                flex
+                justify-between
+                items-end
+                text-white
+              "
+            >
+              <h3 class="font-head text-xl font-medium">
+                Successful areas of <br />
+                ICT in BD
+              </h3>
+              <a class="font-body text-xs underline" href="#">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-image"></div>
+    </section>
+    <!-- Six end -->
+
+    <!-- Contact start -->
+    <section class="contact-area relative mt-16">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="contact-content py-44 w-3/5">
+            <h2 class="font-head font-semibold text-2xl max-w-md">
+              Trademission will be hosted by and.. ect probably dates planned
+              Date 1 Date 2, schedule emirates flight plan, hosting, sessions,
+              education institutes ease of doing business ect.
+            </h2>
+          </div>
+
+          <div
+            class="form-wrapper w-2/5 flex justify-center items-start flex-col"
+          >
+            <div class="max-w-md mx-auto">
+              <h3 class="font-head font-semibold text-3xl mb-2">
+                Keep Me Update
+              </h3>
+              <p class="font-body font-light text-sm text-gray-400 mb-6">
+                Subscribe to our MailChimp newsletter and stay up to date with
+                all events coming straight in your mailbox:
+              </p>
+              <form action="#">
+                <input
+                  type="text"
+                  class="rounded-none w-full bg-white mb-4 px-4 py-2 font-body"
+                  name="fullname"
+                  placeholder="Full Name"
+                />
+                <input
+                  type="email"
+                  class="rounded-none w-full bg-white mb-4 px-4 py-2 font-body"
+                  name="email"
+                  placeholder="Email"
+                />
+                <button
+                  class="
+                    flex
+                    justify-center
+                    items-center
+                    mx-auto
+                    px-12
+                    py-2
+                    font-head
+                  "
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact end -->
+
+    <!-- Footer start -->
+    <footer class="footer">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-center items-center space-x-16 py-11">
+          <img class="w-24" src="images/f_logo.png" alt="" />
+          <img class="w-24" src="images/f_logo.png" alt="" />
+          <img class="w-24" src="images/f_logo.png" alt="" />
+          <img class="w-24" src="images/f_logo.png" alt="" />
+        </div>
+        <hr />
+        <p class="text-center text-gray-500 text-sm font-light font-body my-5">
+          This site is supported and developed by PlanetNine Trademission
+        </p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>
