@@ -24,42 +24,37 @@
   </head>
   <body>
     <!-- Header start -->
-    <header class="header py-5 font-body">
+    <header class="header py-3 lg:py-5 font-body">
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
           <div class="logo">
-            <a href="#"><img src="images/logo.png" alt="trademission" /></a>
+            <a href="#"
+              ><img
+                class="w-24 lg:w-32"
+                src="images/logo.png"
+                alt="trademission"
+            /></a>
           </div>
-
-          <nav class="main-menu">
-            <ul class="flex">
-              <li>
-                <a class="inline-block transition hover:underline" href="#"
-                  >Ministry of Foreign Affairs BD</a
-                >
-              </li>
-              <li>
-                <a class="inline-block transition hover:underline" href="#"
-                  >Embassy of Bangladesh in Netherlands
-                </a>
-              </li>
-              <li>
-                <a class="inline-block transition hover:underline" href="#"
-                  >Trademission Partners</a
-                >
-              </li>
-            </ul>
-          </nav>
 
           <ul class="flag flex items-center">
             <li class="mr-2">
-              <a href="#"><img src="images/nl_flag.png" alt="nl" /></a>
+              <a href="#"
+                ><img
+                  class="w-4 md:w-6 lg:w-8"
+                  src="images/nl_flag.png"
+                  alt="nl"
+              /></a>
             </li>
             <li>
-              <a href="#"><img src="images/uk_flag.png" alt="en" /></a>
+              <a href="#"
+                ><img
+                  class="w-4 md:w-6 lg:w-8"
+                  src="images/uk_flag.png"
+                  alt="en"
+              /></a>
             </li>
             <li class="ml-6">
-              <a href="#" class="inline-block">
+              <a href="#" class="inline-block text-xs md:sm lg:text-base">
                 >> <span class="underline">Switch to BD</span></a
               >
             </li>
@@ -70,20 +65,24 @@
     <!-- Header end -->
 
     <!-- Hero start -->
-    <section
-      class="hero relative"
-      style="
-        background: url('./images/hero_bgg.jpg') center center / cover no-repeat;
-        height: 650px;
-      "
-    >
+    <section class="hero relative py-10 lg:py-0">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-2">
-          <div class="text-white mt-96">
-            <h2 class="text-3xl font-head mb-5 font-semibold uppercase">
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-96">
+          <div class="text-white lg:mt-96">
+            <h2
+              class="
+                text-xl
+                md:text-3xl
+                font-head
+                mb-2
+                lg:mb-5
+                font-semibold
+                uppercase
+              "
+            >
               Destination BD
             </h2>
-            <p class="font-body font-light max-w-md mb-7 text-sm">
+            <p class="font-body font-light max-w-md mb-3 md:mb-7 text-sm">
               Subscribe to our MailChimp newsletter and stay up to date with all
               events coming straight in your mailbox...
             </p>
@@ -94,141 +93,168 @@
             >
           </div>
 
-          <div class="faqs mt-48">
-            <div class="mb-4" x-data="{ open: false }">
+          <div
+            x-data="{ openedIndex: -1 }"
+            class="flex flex-col lg:p-4 mt-6 mt:0 lg:mt-40"
+          >
+            <div class="mb-4">
               <div
-                @click="open = !open"
-                class="
-                  flex
-                  items-center
-                  justify-between
-                  bg-white
-                  p-4
-                  rounded-lg
-                "
+                @click="openedIndex == 1 ? openedIndex = -1 : openedIndex = 1"
+                :class="openedIndex == 1 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
+                class="flex items-center justify-between p-4"
               >
-                <h3 class="font-head font-semibold text-xl">
+                <h3
+                  class="
+                    font-head font-semibold
+                    text-sm
+                    md:text-base
+                    2xl:text-xl
+                  "
+                >
                   Did you know quick fact that
                 </h3>
                 <span
-                  :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  :class="openedIndex == 1 ? 'fa-chevron-up' : 'fa-chevron-down'"
                   class="fas"
                 ></span>
               </div>
               <div
                 x-cloak
-                x-show="open"
-                x-transition.delay.50ms
-                class="bg-white rounded-lg p-4 font-body"
+                x-show="openedIndex == 1"
+                :class="openedIndex == 1 ? 'rounded-b-md' : 'rounded-lg'"
+                class="bg-white p-4 font-body"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-                litora torquent per conubia nostra, per inceptos himenaeos.
-                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-                porta eu gravida ut, maximus non erat.
+                <p class="text-sm font-body font-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam varius vel magna lacinia mollis. Class aptent taciti
+                  sociosqu ad litora torquent per conubia nostra, per inceptos
+                  himenaeos. Quisque ligula neque.
+                </p>
+                <a
+                  class="text-sm font-body underline mt-2 inline-block dd-link"
+                  href="#"
+                  >Read more</a
+                >
               </div>
             </div>
-            <div class="mb-4" x-data="{ open: false }">
+            <div class="mb-4">
               <div
-                @click="open = !open"
-                class="
-                  flex
-                  items-center
-                  justify-between
-                  bg-white
-                  p-4
-                  rounded-lg
-                "
+                @click="openedIndex == 2 ? openedIndex = -1 : openedIndex = 2"
+                :class="openedIndex == 2 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
+                class="flex items-center justify-between p-4"
               >
-                <h3 class="font-head font-semibold text-xl">
+                <h3
+                  class="
+                    font-head font-semibold
+                    text-sm
+                    md:text-base
+                    2xl:text-xl
+                  "
+                >
                   More than 40 world class firms
                 </h3>
                 <span
-                  :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  :class="openedIndex == 2 ? 'fa-chevron-up' : 'fa-chevron-down'"
                   class="fas"
                 ></span>
               </div>
               <div
                 x-cloak
-                x-show="open"
-                x-transition.delay.50ms
-                class="bg-white rounded-lg p-4 font-body"
+                x-show="openedIndex == 2"
+                :class="openedIndex == 2 ? 'rounded-b-md' : 'rounded-lg'"
+                class="bg-white p-4 font-body"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-                litora torquent per conubia nostra, per inceptos himenaeos.
-                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-                porta eu gravida ut, maximus non erat.
+                <p class="text-sm font-body font-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam varius vel magna lacinia mollis. Class aptent taciti
+                  sociosqu ad litora torquent per conubia nostra, per inceptos
+                  himenaeos. Quisque ligula neque.
+                </p>
+                <a
+                  class="text-sm font-body underline mt-2 inline-block dd-link"
+                  href="#"
+                  >Read more</a
+                >
               </div>
             </div>
-            <div class="mb-4" x-data="{ open: false }">
+            <div class="mb-4">
               <div
-                @click="open = !open"
-                class="
-                  flex
-                  items-center
-                  justify-between
-                  bg-white
-                  p-4
-                  rounded-lg
-                "
+                @click="openedIndex == 3 ? openedIndex = -1 : openedIndex = 3"
+                :class="openedIndex == 3 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
+                class="flex items-center justify-between p-4"
               >
-                <h3 class="font-head font-semibold text-xl">
-                  EDUCATIONS with practical output
+                <h3
+                  class="
+                    font-head font-semibold
+                    text-sm
+                    md:text-base
+                    2xl:text-xl
+                  "
+                >
+                  Educations with practical output
                 </h3>
                 <span
-                  :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  :class="openedIndex == 3 ? 'fa-chevron-up' : 'fa-chevron-down'"
                   class="fas"
                 ></span>
               </div>
               <div
                 x-cloak
-                x-show="open"
-                x-transition.delay.50ms
-                class="bg-white rounded-lg p-4 font-body"
+                x-show="openedIndex == 3"
+                :class="openedIndex == 3 ? 'rounded-b-md' : 'rounded-lg'"
+                class="bg-white p-4 font-body"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-                litora torquent per conubia nostra, per inceptos himenaeos.
-                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-                porta eu gravida ut, maximus non erat.
+                <p class="text-sm font-body font-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam varius vel magna lacinia mollis. Class aptent taciti
+                  sociosqu ad litora torquent per conubia nostra, per inceptos
+                  himenaeos. Quisque ligula neque.
+                </p>
+                <a
+                  class="text-sm font-body underline mt-2 inline-block dd-link"
+                  href="#"
+                  >Read more</a
+                >
               </div>
             </div>
-            <div x-data="{ open: false }">
+            <div class="">
               <div
-                @click="open = !open"
-                class="
-                  flex
-                  items-center
-                  justify-between
-                  bg-white
-                  p-4
-                  rounded-lg
-                "
+                @click="openedIndex == 4 ? openedIndex = -1 : openedIndex = 4"
+                :class="openedIndex == 4 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
+                class="flex items-center justify-between p-4"
               >
-                <h3 class="font-head font-semibold text-xl">
+                <h3
+                  class="
+                    font-head font-semibold
+                    text-sm
+                    md:text-base
+                    2xl:text-xl
+                  "
+                >
                   Ease of doing business
                 </h3>
                 <span
-                  :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  :class="openedIndex == 4 ? 'fa-chevron-up' : 'fa-chevron-down'"
                   class="fas"
                 ></span>
               </div>
               <div
                 x-cloak
-                x-show="open"
-                x-transition.delay.50ms
-                class="bg-white rounded-lg p-4 font-body"
+                x-show="openedIndex == 4"
+                :class="openedIndex == 4 ? 'rounded-b-md' : 'rounded-lg'"
+                class="bg-white p-4 font-body"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                varius vel magna lacinia mollis. Class aptent taciti sociosqu ad
-                litora torquent per conubia nostra, per inceptos himenaeos.
-                Quisque ligula neque, imperdiet nec est laoreet, pulvinar
-                commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh,
-                porta eu gravida ut, maximus non erat.
+                <p class="text-sm font-body font-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam varius vel magna lacinia mollis. Class aptent taciti
+                  sociosqu ad litora torquent per conubia nostra, per inceptos
+                  himenaeos. Quisque ligula neque.
+                </p>
+                <a
+                  class="text-sm font-body underline mt-2 inline-block dd-link"
+                  href="#"
+                  >Read more</a
+                >
               </div>
             </div>
           </div>
@@ -240,17 +266,37 @@
     <!-- About start -->
     <section class="about-area relative py-16">
       <img class="absolute top-0 right-0" src="images/hero_shape.png" alt="" />
-      <div class="container mx-auto px-4 pl-28">
-        <p class="uppercase font-medium font-head mb-12">
+      <div class="container mx-auto px-4 md:pl-28">
+        <p
+          class="
+            uppercase
+            text-sm
+            md:text-base
+            font-medium font-head
+            mb-4
+            lg:mb-12
+          "
+        >
           Learn About Tradmission
         </p>
 
-        <h2 class="font-head text-4xl max-w-xl mb-10 font-semibold">
+        <h2
+          class="
+            font-head
+            text-base
+            md:text-2xl
+            lg:text-4xl
+            max-w-xl
+            mb-3
+            lg:mb-10
+            font-semibold
+          "
+        >
           longer text explanation about the Trade mission and how it will happen
           and when it is.
         </h2>
 
-        <p class="font-body max-w-5xl font-light">
+        <p class="font-body max-w-5xl text-sm lg:text-base font-light">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -264,9 +310,9 @@
     <!-- About end -->
 
     <!-- Six start -->
-    <section class="six-area relative pt-20">
+    <section class="six-area lg:pt-20">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-10">
           <div class="relative">
             <img class="w-full" src="images/image_1.jpg" alt="" />
             <div
@@ -282,7 +328,7 @@
                 text-white
               "
             >
-              <h3 class="font-head text-xl font-medium">
+              <h3 class="font-head text-base lg:text-xl font-medium">
                 Successful areas of <br />
                 ICT in BD
               </h3>
@@ -290,7 +336,7 @@
             </div>
           </div>
           <div class="relative">
-            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <img class="w-full" src="images/image_2.jpg" alt="" />
             <div
               class="
                 absolute
@@ -304,7 +350,7 @@
                 text-white
               "
             >
-              <h3 class="font-head text-xl font-medium">
+              <h3 class="font-head text-base lg:text-xl font-medium">
                 Successful areas of <br />
                 ICT in BD
               </h3>
@@ -312,7 +358,7 @@
             </div>
           </div>
           <div class="relative">
-            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <img class="w-full" src="images/image_3.jpg" alt="" />
             <div
               class="
                 absolute
@@ -326,7 +372,7 @@
                 text-white
               "
             >
-              <h3 class="font-head text-xl font-medium">
+              <h3 class="font-head text-base lg:text-xl font-medium">
                 Successful areas of <br />
                 ICT in BD
               </h3>
@@ -334,7 +380,7 @@
             </div>
           </div>
           <div class="relative">
-            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <img class="w-full" src="images/image_4.jpg" alt="" />
             <div
               class="
                 absolute
@@ -348,7 +394,7 @@
                 text-white
               "
             >
-              <h3 class="font-head text-xl font-medium">
+              <h3 class="font-head text-base lg:text-xl font-medium">
                 Successful areas of <br />
                 ICT in BD
               </h3>
@@ -356,7 +402,7 @@
             </div>
           </div>
           <div class="relative">
-            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <img class="w-full" src="images/image_5.jpg" alt="" />
             <div
               class="
                 absolute
@@ -370,7 +416,7 @@
                 text-white
               "
             >
-              <h3 class="font-head text-xl font-medium">
+              <h3 class="font-head text-base lg:text-xl font-medium">
                 Successful areas of <br />
                 ICT in BD
               </h3>
@@ -378,7 +424,7 @@
             </div>
           </div>
           <div class="relative">
-            <img class="w-full" src="images/image_1.jpg" alt="" />
+            <img class="w-full" src="images/image_6.jpg" alt="" />
             <div
               class="
                 absolute
@@ -392,7 +438,7 @@
                 text-white
               "
             >
-              <h3 class="font-head text-xl font-medium">
+              <h3 class="font-head text-base lg:text-xl font-medium">
                 Successful areas of <br />
                 ICT in BD
               </h3>
@@ -401,17 +447,16 @@
           </div>
         </div>
       </div>
-
-      <div class="top-image"></div>
     </section>
     <!-- Six end -->
 
     <!-- Contact start -->
     <section class="contact-area relative mt-16">
+      <div class="top-image"></div>
       <div class="container mx-auto px-4">
-        <div class="flex justify-between">
-          <div class="contact-content py-44 w-3/5">
-            <h2 class="font-head font-semibold text-2xl max-w-md">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="contact-content py-32 lg:py-44 md:w-3/5">
+            <h2 class="font-head font-semibold text-base lg:text-2xl max-w-md">
               Trademission will be hosted by and.. ect probably dates planned
               Date 1 Date 2, schedule emirates flight plan, hosting, sessions,
               education institutes ease of doing business ect.
@@ -419,10 +464,17 @@
           </div>
 
           <div
-            class="form-wrapper w-2/5 flex justify-center items-start flex-col"
+            class="
+              form-wrapper
+              md:w-2/5
+              flex
+              justify-center
+              items-start
+              flex-col
+            "
           >
-            <div class="max-w-md mx-auto">
-              <h3 class="font-head font-semibold text-3xl mb-2">
+            <div class="max-w-md mx-auto p-4">
+              <h3 class="font-head font-semibold text-xl lg:text-3xl mb-2">
                 Keep Me Update
               </h3>
               <p class="font-body font-light text-sm text-gray-400 mb-6">
@@ -432,13 +484,33 @@
               <form action="#">
                 <input
                   type="text"
-                  class="rounded-none w-full bg-white mb-4 px-4 py-2 font-body"
+                  class="
+                    rounded-none
+                    w-full
+                    bg-white
+                    mb-4
+                    px-4
+                    py-2
+                    font-body
+                    text-gray-500
+                    focus:outline-none
+                  "
                   name="fullname"
                   placeholder="Full Name"
                 />
                 <input
                   type="email"
-                  class="rounded-none w-full bg-white mb-4 px-4 py-2 font-body"
+                  class="
+                    rounded-none
+                    w-full
+                    bg-white
+                    mb-4
+                    px-4
+                    py-2
+                    font-body
+                    text-gray-500
+                    focus:outline-none
+                  "
                   name="email"
                   placeholder="Email"
                 />
@@ -467,20 +539,46 @@
     <!-- Footer start -->
     <footer class="footer">
       <div class="container mx-auto px-4">
-        <div class="flex justify-center items-center space-x-16 py-11">
-          <img class="w-24" src="images/f_logo.png" alt="" />
-          <img class="w-24" src="images/f_logo.png" alt="" />
-          <img class="w-24" src="images/f_logo.png" alt="" />
-          <img class="w-24" src="images/f_logo.png" alt="" />
+        <div
+          class="
+            grid grid-cols-2
+            md:grid-cols-4
+            gap-4
+            lg:gap-10 lg:max-w-6xl lg:mx-auto
+            py-4
+            lg:py-11
+            place-items-center
+          "
+        >
+          <img class="w-24 lg:w-32" src="images/basis.png" alt="basis" />
+          <img class="w-24 lg:w-32" src="images/mofa.png" alt="MOFA" />
+          <img
+            class="w-24 lg:w-32"
+            src="images/nl_embassy.png"
+            alt="NL Embassy"
+          />
+          <img
+            class="w-24 lg:w-32"
+            src="images/bd_embassy.png"
+            alt="BD Embassy"
+          />
         </div>
         <hr />
-        <p class="text-center text-gray-500 text-sm font-light font-body my-5">
+        <p
+          class="
+            text-center text-gray-500 text-xs
+            lg:text-sm
+            font-light font-body
+            my-3
+            lg:my-5
+          "
+        >
           This site is supported and developed by PlanetNine Trademission
         </p>
       </div>
     </footer>
     <!-- Footer end -->
 
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/js/alpinejs.min.js" defer></script>
   </body>
 </html>
