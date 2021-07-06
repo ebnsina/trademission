@@ -1,6 +1,7 @@
 :root {
   --primary: #0e5e6f;
   --secondary: #0d3d55;
+  --secondary-light: #1f5061;
   --blue: #53aeff;
 }
 
@@ -90,6 +91,47 @@ body {
   background-color: var(--blue);
 }
 
+.form-wrapper button:hover {
+  background-color: var(--secondary-light);
+}
+
+/* index2 */
+.testimonial {
+  background-color: #f1f2f2;
+}
+
+.bubble::before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.bubble-left::before {
+  border-left: 15px solid transparent;
+  border-right: 15px solid #f1f2f2;
+  border-top: 15px solid #f1f2f2;
+  border-bottom: 15px solid transparent;
+  left: -30px;
+}
+
+.bubble-right::before {
+  border-left: 15px solid #f1f2f2;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #f1f2f2;
+  border-bottom: 15px solid transparent;
+  right: -30px;
+}
+
+.testimonial blockquote:before {
+  content: open-quote;
+}
+
+.testimonial blockquote:after {
+  content: close-quote;
+}
+
 /* Responsive */
 
 @media (min-width: 640px) {
@@ -109,5 +151,19 @@ body {
 @media (min-width: 1280px) {
   .contact-content {
     background-position: 0 95%, 100% 100%;
+  }
+
+  .testimonial blockquote:before {
+    content: url('../images/quote_left.png');
+    left: 25px;
+    top: -30px;
+    position: absolute;
+  }
+
+  .testimonial blockquote:after {
+    content: url('../images/quote_right.png');
+    right: 25px;
+    bottom: -40px;
+    position: absolute;
   }
 }
