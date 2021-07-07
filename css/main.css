@@ -140,12 +140,6 @@ body {
   color: var(--blue);
 }
 
-.q-links li:not(:last-child) {
-  border-right: 1px solid var(--primary);
-  padding-right: 1.5rem;
-  margin-right: 1.5rem;
-}
-
 /* index BD */
 .faq-bg {
   background-color: #f0f6f9;
@@ -193,5 +187,11 @@ body {
     right: 25px;
     bottom: -40px;
     position: absolute;
+  }
+
+  .q-links li:not(:last-child) {
+    border-right: 1px solid var(--primary);
+    padding-right: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
