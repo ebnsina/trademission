@@ -68,7 +68,7 @@
     <!-- Header end -->
 
     <!-- Hero start -->
-    <section class="hero relative py-10 lg:py-0">
+    <section class="hero-bd relative py-10 lg:py-0">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-96">
           <div class="text-white lg:mt-96">
@@ -96,15 +96,19 @@
             >
           </div>
 
-          <div
-            x-data="{ openedIndex: -1 }"
-            class="flex flex-col lg:p-4 mt-6 mt:0 lg:mt-20"
-          >
-            <div class="mb-4">
+          <div class="flex flex-col lg:p-4 mt-6 mt:0 lg:mt-10">
+            <div class="mb-6">
               <div
-                @click="openedIndex == 1 ? openedIndex = -1 : openedIndex = 1"
-                :class="openedIndex == 1 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
-                class="flex items-center justify-between p-4 lg:p-4"
+                class="
+                  bg-secondary
+                  text-white
+                  rounded-t-md
+                  flex
+                  items-center
+                  justify-between
+                  p-4
+                  lg:p-4
+                "
               >
                 <h3
                   class="
@@ -114,122 +118,32 @@
                     2xl:text-xl
                   "
                 >
-                  The New-East Technology Destination
+                  আপনার নিজের আইসিটি হাব গঠনের সহজ পদক্ষেপ।
                 </h3>
-                <span
-                  :class="openedIndex == 1 ? 'fa-chevron-up' : 'fa-chevron-down'"
-                  class="fas"
-                ></span>
               </div>
-              <div
-                x-cloak
-                x-show="openedIndex == 1"
-                :class="openedIndex == 1 ? 'rounded-b-md' : 'rounded-lg'"
-                class="bg-white p-4 font-body"
-              >
+              <div class="rounded-b-md bg-white p-4 font-body">
                 <p class="text-sm font-body font-light">
-                  We know who we are and where we come from. Now we invite you
-                  to take a look deeper into the opportunities Bangladesh has to
-                  offer in the ICT industry. Just graduating to a middle income
-                  country, but a high -class ICT destination.
+                  বাংলাদেশ বৈদেশিক বিনিয়োগ এবং ব্যাকঅফিসের বিকাশকে দ্রুত,
+                  নিরাপদ এবং আর্থিকভাবে আকর্ষণীয় করেছে। সারাদেশে এবং আশেপাশে ৮০
+                  টি শুল্কমুক্ত ইপিজেডের সাহায্যে, সরকারের বিনিয়োগের উদ্যোগ এবং
+                  একটি বিদেশী বিনিয়োগ ব্যুরো (বিআইডিএ) দ্বারা একটি
+                  লাল-কার্পেটকে স্বাগত জানানো হয়েছে, অনেকগুলি ক্ষেত্রে ছোট থেকে
+                  বড় আকারের ব্যাকফিসগুলি দ্রুত গঠিত হতে পারে।
                 </p>
-                <a
-                  class="text-sm font-body underline mt-2 inline-block dd-link"
-                  href="#"
-                  >Read more</a
-                >
-              </div>
-            </div>
-            <div class="mb-4">
-              <div
-                @click="openedIndex == 2 ? openedIndex = -1 : openedIndex = 2"
-                :class="openedIndex == 2 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
-                class="flex items-center justify-between p-4 lg:p-4"
-              >
-                <h3
-                  class="
-                    font-head font-semibold
-                    text-sm
-                    md:text-base
-                    2xl:text-xl
-                  "
-                >
-                  These 40 successful innovators can guide you.
-                </h3>
-                <span
-                  :class="openedIndex == 2 ? 'fa-chevron-up' : 'fa-chevron-down'"
-                  class="fas"
-                ></span>
-              </div>
-              <div
-                x-cloak
-                x-show="openedIndex == 2"
-                :class="openedIndex == 2 ? 'rounded-b-md' : 'rounded-lg'"
-                class="bg-white p-4 font-body"
-              >
-                <p class="text-sm font-body font-light">
-                  Robotics, blockchain, IOT are driving forces of a changing
-                  worldwide economy. Do you want to see how students are thought
-                  serverless and cloud computing by alumni of the largest
-                  companies like Amazon, Adobe, Google and IBM? Look no further
-                  and see the spin offs that operate now from Bangladesh. At the
-                  same time, creative services such as 3D rendering, Industrial
-                  design and Video development. Many of the products you see
-                  daily may not come from where you expect them to be from..
-                </p>
-                <a
-                  class="text-sm font-body underline mt-2 inline-block dd-link"
-                  href="#"
-                  >Read more</a
-                >
-              </div>
-            </div>
-            <div class="mb-4">
-              <div
-                @click="openedIndex == 3 ? openedIndex = -1 : openedIndex = 3"
-                :class="openedIndex == 3 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
-                class="flex items-center justify-between p-4 lg:p-4"
-              >
-                <h3
-                  class="
-                    font-head font-semibold
-                    text-sm
-                    md:text-base
-                    2xl:text-xl
-                  "
-                >
-                  World Class Universities Drive Knowledge.
-                </h3>
-                <span
-                  :class="openedIndex == 3 ? 'fa-chevron-up' : 'fa-chevron-down'"
-                  class="fas"
-                ></span>
-              </div>
-              <div
-                x-cloak
-                x-show="openedIndex == 3"
-                :class="openedIndex == 3 ? 'rounded-b-md' : 'rounded-lg'"
-                class="bg-white p-4 font-body"
-              >
-                <p class="text-sm font-body font-light">
-                  With an outflow of over 1 million students annually from
-                  universities like BUET, BRAC, Dhaka University, education
-                  stands at a high ground, and students from many countries come
-                  to do their masters and research led by fellows from Europe.
-                  Tap into the best supply.
-                </p>
-                <a
-                  class="text-sm font-body underline mt-2 inline-block dd-link"
-                  href="#"
-                  >Read more</a
-                >
               </div>
             </div>
             <div class="">
               <div
-                @click="openedIndex == 4 ? openedIndex = -1 : openedIndex = 4"
-                :class="openedIndex == 4 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
-                class="flex items-center justify-between p-4 lg:p-4"
+                class="
+                  bg-secondary
+                  text-white
+                  rounded-t-md
+                  flex
+                  items-center
+                  justify-between
+                  p-4
+                  lg:p-4
+                "
               >
                 <h3
                   class="
@@ -241,17 +155,8 @@
                 >
                   Easy steps to form your own ICT hub.
                 </h3>
-                <span
-                  :class="openedIndex == 4 ? 'fa-chevron-up' : 'fa-chevron-down'"
-                  class="fas"
-                ></span>
               </div>
-              <div
-                x-cloak
-                x-show="openedIndex == 4"
-                :class="openedIndex == 4 ? 'rounded-b-md' : 'rounded-lg'"
-                class="bg-white p-4 font-body"
-              >
+              <div class="bg-white p-4 font-body rounded-b-md">
                 <p class="text-sm font-body font-light">
                   Bangladesh has made foreign investment and the development of
                   backoffices quick, safe and financially attractive. With 80
@@ -260,11 +165,6 @@
                   foreign investment (BIDA), small to large scale backoffices in
                   many areas can be formed quickly.
                 </p>
-                <a
-                  class="text-sm font-body underline mt-2 inline-block dd-link"
-                  href="#"
-                  >Read more</a
-                >
               </div>
             </div>
           </div>

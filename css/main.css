@@ -39,7 +39,8 @@ body {
   color: var(--blue);
 }
 
-.hero {
+.hero,
+.hero-bd {
   background: url('../images/hero.webp') center center / cover no-repeat;
 }
 
@@ -160,13 +161,15 @@ body {
 }
 
 @media (min-width: 768px) {
-  .hero {
-  }
 }
 
 @media (min-width: 1024px) {
   .hero {
     height: 730px;
+  }
+
+  .hero-bd {
+    height: 585px;
   }
 }
 
