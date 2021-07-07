@@ -132,6 +132,34 @@ body {
   content: close-quote;
 }
 
+.q-links a {
+  transition: all 0.2s;
+}
+
+.q-links li a:hover {
+  color: var(--blue);
+}
+
+.q-links li:not(:last-child) {
+  border-right: 1px solid var(--primary);
+  padding-right: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/* index BD */
+.faq-bg {
+  background-color: #f0f6f9;
+}
+
+.bd-faq {
+  border-bottom: 1px solid #0e3c55;
+}
+
+.bd-faqs li::before {
+  content: '*';
+  display: inline-block;
+}
+
 /* Responsive */
 
 @media (min-width: 640px) {

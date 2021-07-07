@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trademission</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Header start -->
+    <header class="header py-3 lg:py-5 font-body">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <div class="logo">
+            <a href="index.html"
+              ><img
+                class="w-24 lg:w-32"
+                src="images/logo.png"
+                alt="trademission"
+            /></a>
+          </div>
+
+          <ul class="flag flex items-center">
+            <li class="mr-2">
+              <a href="#"
+                ><img
+                  class="w-4 md:w-6 lg:w-8"
+                  src="images/nl_flag.png"
+                  alt="nl"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="w-4 md:w-6 lg:w-8"
+                  src="images/uk_flag.png"
+                  alt="en"
+              /></a>
+            </li>
+            <li class="ml-6">
+              <a
+                href="index.html"
+                class="inline-block text-xs md:sm lg:text-base"
+              >
+                >> <span class="underline">Switch to NL</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Hero start -->
+    <section class="hero relative py-10 lg:py-0">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-96">
+          <div class="text-white lg:mt-96">
+            <h2
+              class="
+                text-xl
+                md:text-3xl
+                font-head
+                mb-2
+                lg:mb-5
+                font-semibold
+                uppercase
+              "
+            >
+              Destination BD
+            </h2>
+            <p class="font-body font-light max-w-md mb-3 md:mb-7 text-sm">
+              Subscribe to our MailChimp newsletter and stay up to date with all
+              events coming straight in your mailbox...
+            </p>
+            <a
+              class="inline-block underline font-body font-light text-sm"
+              href="#"
+              >Read more</a
+            >
+          </div>
+
+          <div
+            x-data="{ openedIndex: -1 }"
+            class="flex flex-col lg:p-4 mt-6 mt:0 lg:mt-20"
+          >
+            <div class="mb-4">
+              <div
+                @click="openedIndex == 1 ? openedIndex = -1 : openedIndex = 1"
+                :class="openedIndex == 1 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
+                class="flex items-center justify-between p-4 lg:p-4"
+              >
+                <h3
+                  class="
+                    font-head font-semibold
+                    text-sm
+                    md:text-base
+                    2xl:text-xl
+                  "
+                >
+                  The New-East Technology Destination
+                </h3>
+                <span
+                  :class="openedIndex == 1 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  class="fas"
+                ></span>
+              </div>
+              <div
+                x-cloak
+                x-show="openedIndex == 1"
+                :class="openedIndex == 1 ? 'rounded-b-md' : 'rounded-lg'"
+                class="bg-white p-4 font-body"
+              >
+                <p class="text-sm font-body font-light">
+                  We know who we are and where we come from. Now we invite you
+                  to take a look deeper into the opportunities Bangladesh has to
+                  offer in the ICT industry. Just graduating to a middle income
+                  country, but a high -class ICT destination.
+                </p>
+                <a
+                  class="text-sm font-body underline mt-2 inline-block dd-link"
+                  href="#"
+                  >Read more</a
+                >
+              </div>
+            </div>
+            <div class="mb-4">
+              <div
+                @click="openedIndex == 2 ? openedIndex = -1 : openedIndex = 2"
+                :class="openedIndex == 2 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
+                class="flex items-center justify-between p-4 lg:p-4"
+              >
+                <h3
+                  class="
+                    font-head font-semibold
+                    text-sm
+                    md:text-base
+                    2xl:text-xl
+                  "
+                >
+                  These 40 successful innovators can guide you.
+                </h3>
+                <span
+                  :class="openedIndex == 2 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  class="fas"
+                ></span>
+              </div>
+              <div
+                x-cloak
+                x-show="openedIndex == 2"
+                :class="openedIndex == 2 ? 'rounded-b-md' : 'rounded-lg'"
+                class="bg-white p-4 font-body"
+              >
+                <p class="text-sm font-body font-light">
+                  Robotics, blockchain, IOT are driving forces of a changing
+                  worldwide economy. Do you want to see how students are thought
+                  serverless and cloud computing by alumni of the largest
+                  companies like Amazon, Adobe, Google and IBM? Look no further
+                  and see the spin offs that operate now from Bangladesh. At the
+                  same time, creative services such as 3D rendering, Industrial
+                  design and Video development. Many of the products you see
+                  daily may not come from where you expect them to be from..
+                </p>
+                <a
+                  class="text-sm font-body underline mt-2 inline-block dd-link"
+                  href="#"
+                  >Read more</a
+                >
+              </div>
+            </div>
+            <div class="mb-4">
+              <div
+                @click="openedIndex == 3 ? openedIndex = -1 : openedIndex = 3"
+                :class="openedIndex == 3 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
+                class="flex items-center justify-between p-4 lg:p-4"
+              >
+                <h3
+                  class="
+                    font-head font-semibold
+                    text-sm
+                    md:text-base
+                    2xl:text-xl
+                  "
+                >
+                  World Class Universities Drive Knowledge.
+                </h3>
+                <span
+                  :class="openedIndex == 3 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  class="fas"
+                ></span>
+              </div>
+              <div
+                x-cloak
+                x-show="openedIndex == 3"
+                :class="openedIndex == 3 ? 'rounded-b-md' : 'rounded-lg'"
+                class="bg-white p-4 font-body"
+              >
+                <p class="text-sm font-body font-light">
+                  With an outflow of over 1 million students annually from
+                  universities like BUET, BRAC, Dhaka University, education
+                  stands at a high ground, and students from many countries come
+                  to do their masters and research led by fellows from Europe.
+                  Tap into the best supply.
+                </p>
+                <a
+                  class="text-sm font-body underline mt-2 inline-block dd-link"
+                  href="#"
+                  >Read more</a
+                >
+              </div>
+            </div>
+            <div class="">
+              <div
+                @click="openedIndex == 4 ? openedIndex = -1 : openedIndex = 4"
+                :class="openedIndex == 4 ? 'bg-secondary text-white rounded-t-md' : 'bg-white rounded-md'"
+                class="flex items-center justify-between p-4 lg:p-4"
+              >
+                <h3
+                  class="
+                    font-head font-semibold
+                    text-sm
+                    md:text-base
+                    2xl:text-xl
+                  "
+                >
+                  Easy steps to form your own ICT hub.
+                </h3>
+                <span
+                  :class="openedIndex == 4 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                  class="fas"
+                ></span>
+              </div>
+              <div
+                x-cloak
+                x-show="openedIndex == 4"
+                :class="openedIndex == 4 ? 'rounded-b-md' : 'rounded-lg'"
+                class="bg-white p-4 font-body"
+              >
+                <p class="text-sm font-body font-light">
+                  Bangladesh has made foreign investment and the development of
+                  backoffices quick, safe and financially attractive. With 80
+                  Tax-free EPZs in and around the country, government investment
+                  initiatives and a red-carpet welcome by Bangladesh bureau of
+                  foreign investment (BIDA), small to large scale backoffices in
+                  many areas can be formed quickly.
+                </p>
+                <a
+                  class="text-sm font-body underline mt-2 inline-block dd-link"
+                  href="#"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero end -->
+
+    <!-- About start -->
+    <section class="about-area relative py-16">
+      <img class="absolute top-0 right-0" src="images/hero_shape.png" alt="" />
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-32">
+          <div>
+            <h2 class="font-head font-semibold text-xl lg:text-3xl mb-4">
+              Netherlands - Bangladesh <br />
+              trademission
+            </h2>
+            <div class="max-w-md">
+              <p
+                class="
+                  font-body
+                  text-sm
+                  lg:text-base
+                  leading-loose
+                  font-light
+                  mb-4
+                "
+              >
+                In the first quarter of next year (2022) a trademission is being
+                developed in which Dutch companies in the ICT and Creative
+                sector will seek opportunities to outsource and cooperate with
+                service providers in Bangladesh.
+              </p>
+              <p
+                class="font-body text-sm lg:text-base leading-loose font-light"
+              >
+                If you wish to read more, please find answers in the background
+                page of this website.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-head font-semibold text-xl lg:text-3xl mb-4">
+              The ICT/ Creative sectors <br />
+              in NL and BD
+            </h2>
+            <div class="max-w-lg">
+              <p
+                class="font-body text-sm lg:text-base leading-loose font-light"
+              >
+                Bangladesh has become a strong player in the IT and creative
+                sector with many qualitative companies and non-governmental
+                institutions. As an instrument to develop better economic
+                relations between the Netherlands and Bangladesh a plan is being
+                developed how demand from Dutch companies in the ICT sector can
+                leverage better with the supply from Bengali partners
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-20">
+          <div>
+            <div x-data="{ faqIndex: -1 }" class="bd-faqs flex flex-col">
+              <div class="bd-faq mb-4">
+                <div
+                  @click="faqIndex == 1 ? faqIndex = -1 : faqIndex = 1"
+                  class="flex items-center justify-between"
+                >
+                  <h3
+                    class="
+                      font-head font-semibold
+                      text-sm
+                      md:text-base
+                      2xl:text-2xl
+                      mb-3
+                    "
+                  >
+                    How does a trade mission work?
+                  </h3>
+                  <span
+                    :class="faqIndex == 1 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                    class="fas"
+                  ></span>
+                </div>
+                <div
+                  x-cloak
+                  x-show="faqIndex == 1"
+                  class="faq-bg p-4 font-body"
+                >
+                  <p class="text-sm font-body font-light">
+                    First, we should explain a few things. In a unilateral
+                    trademission, in this case an ''incoming" trademission, ICT
+                    and creative companies from the Netherlands are invited to
+                    visit Bangladesh. During a 4 to 5 days program, C-level
+                    members will be educated about the workforce, companies,
+                    skills, process of forming partnerships and setting up
+                    backoffices in Bangladesh.
+                  </p>
+                </div>
+              </div>
+              <div class="bd-faq mb-4">
+                <div
+                  @click="faqIndex == 2 ? faqIndex = -1 : faqIndex = 2"
+                  class="flex items-center justify-between"
+                >
+                  <h3
+                    class="
+                      font-head font-semibold
+                      text-sm
+                      md:text-base
+                      2xl:text-2xl
+                      mb-3
+                    "
+                  >
+                    Why is this trademission organised?
+                  </h3>
+                  <span
+                    :class="faqIndex == 2 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                    class="fas"
+                  ></span>
+                </div>
+                <div
+                  x-cloak
+                  x-show="faqIndex == 2"
+                  class="faq-bg p-4 font-body"
+                >
+                  <p class="text-sm font-body font-light">
+                    The Netherlands is a relatively small country with a very
+                    high demand for high-skilled ICT and Creative workers in
+                    top-end areas of the ICT industry. Many Dutch companies have
+                    little knowledge about the possibilities of cooperating with
+                    Bengali companies or forming backoffices in Bangladesh. We
+                    are firstly trying to identify the areas of strength of
+                    Bangladesh, so we can attract and interest Dutch companies
+                    to consider Bangladesh as a new ICT destination.
+                  </p>
+                </div>
+              </div>
+              <div class="bd-faq mb-4">
+                <div
+                  @click="faqIndex == 3 ? faqIndex = -1 : faqIndex = 3"
+                  class="flex items-center justify-between"
+                >
+                  <h3
+                    class="
+                      font-head font-semibold
+                      text-sm
+                      md:text-base
+                      2xl:text-2xl
+                      mb-3
+                    "
+                  >
+                    What kind of companies are visiting Bangladesh?
+                  </h3>
+                  <span
+                    :class="faqIndex == 3 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                    class="fas"
+                  ></span>
+                </div>
+                <div
+                  x-cloak
+                  x-show="faqIndex == 3"
+                  class="faq-bg p-4 font-body"
+                >
+                  <div class="text-sm font-body font-light">
+                    <p class="mb-2">
+                      The companies we can find to visit Bangladesh are not
+                      defined yet. We are now in the process of identifying the
+                      strengths of Bangladeshi companies and where easy matching
+                      can be done so we can present those areas of excellence to
+                      Dutch companies. Without trying to be complete, we think
+                      at the moment of writing this, that there is a hughe
+                      demand for well organised companies and teams in the areas
+                      of:
+                    </p>
+
+                    <ul class="space-y-4">
+                      <li>
+                        Cloud computing (AWS/Azure/Google) - specifically
+                        companies and teams with top-certified developers
+                      </li>
+                      <li>
+                        3D rendering and Color Grading . Highly automated
+                        processpartners
+                      </li>
+                      <li>
+                        E-commerce optimisation and analysis. Certified partners
+                        in the areas of optimizely and Google optimize 360 (DOM
+                        manipulation)
+                      </li>
+                      <li>
+                        CRM implementation, such as certified Salesforce
+                        partners
+                      </li>
+                      <li>This list will gradually be filled</li>
+                      <li>Payment and PSD2 integrations such as Adyen</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="bd-faq mb-4">
+                <div
+                  @click="faqIndex == 4 ? faqIndex = -1 : faqIndex = 4"
+                  class="flex items-center justify-between"
+                >
+                  <h3
+                    class="
+                      font-head font-semibold
+                      text-sm
+                      md:text-base
+                      2xl:text-2xl
+                      mb-3
+                    "
+                  >
+                    How can I participate and benefit?
+                  </h3>
+                  <span
+                    :class="faqIndex == 4 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                    class="fas"
+                  ></span>
+                </div>
+                <div
+                  x-cloak
+                  x-show="faqIndex == 4"
+                  class="faq-bg p-4 font-body"
+                >
+                  <p class="text-sm font-body font-light">
+                    First, we will invite relevant companies from software
+                    associations to submit their profile. These companies will
+                    be asked to submit detailed information on their size,
+                    experience, international references and official
+                    certifications. When we find enough qualified service
+                    providers, these will be clustered and combined into
+                    skills-papers, describing each sector in detail with sample
+                    company and education backgrounds. These sector-reports will
+                    be
+                  </p>
+                </div>
+              </div>
+              <div class="bd-faq mb-4">
+                <div
+                  @click="faqIndex == 5 ? faqIndex = -1 : faqIndex = 5"
+                  class="flex items-center justify-between"
+                >
+                  <h3
+                    class="
+                      font-head font-semibold
+                      text-sm
+                      md:text-base
+                      2xl:text-2xl
+                      mb-3
+                    "
+                  >
+                    What opportunities are there for me?
+                  </h3>
+                  <span
+                    :class="faqIndex == 5 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                    class="fas"
+                  ></span>
+                </div>
+                <div
+                  x-cloak
+                  x-show="faqIndex == 5"
+                  class="faq-bg p-4 font-body"
+                >
+                  <p class="text-sm font-body font-light">
+                    During the process of forming the trademission, there will
+                    be virtual matching sessions, background and development
+                    sessions, and virtual matchmaking sessions. This represents
+                    an awesome opportunity to learn more on the Dutch market,
+                    which skills are in high regard, and which areas bring
+                    opportunities to coooperate and work with clients and
+                    partners from the Netherlands
+                  </p>
+                </div>
+              </div>
+              <div class="bd-faq mb-4">
+                <div
+                  @click="faqIndex == 6 ? faqIndex = -1 : faqIndex = 6"
+                  class="flex items-center justify-between"
+                >
+                  <h3
+                    class="
+                      font-head font-semibold
+                      text-sm
+                      md:text-base
+                      2xl:text-2xl
+                      mb-3
+                    "
+                  >
+                    When, where and how will it be organised?
+                  </h3>
+                  <span
+                    :class="faqIndex == 6 ? 'fa-chevron-up' : 'fa-chevron-down'"
+                    class="fas"
+                  ></span>
+                </div>
+                <div
+                  x-cloak
+                  x-show="faqIndex == 6"
+                  class="faq-bg p-4 font-body"
+                >
+                  <div class="text-sm font-body font-light">
+                    <p class="mb-2">
+                      The timeline of a trademission extends over a number of
+                      steps with lots of opportunities. We will explain each
+                      phase in detail
+                    </p>
+
+                    <ul class="space-y-4">
+                      <li>
+                        BD Preparation phase. In this first phase, approximate
+                        June 2021-October 2021 we are doing interviews with
+                        possible matching candidates on the Bangladesh side, and
+                        investigate how the alignment of education is aligned
+                        the demand for labor in ICT-Creative
+                      </li>
+                      <li>
+                        NL Preparation phase. Based on the (preliminary) results
+                        and insights in the strengths of the Bengali technology
+                        sector, we will start a communication campaign to
+                        interest companies in the ICT sector to consider
+                        Bangladesh as their backoffice & technology destination.
+                      </li>
+                      <li>
+                        Matching and activation. During this phase the mission
+                        team will promote the possible matching candidates to
+                        Dutch companies and inform them on the procedures,
+                        opportunities and advantages of working with Bangladesh
+                        as a backoffice location. Support on cooperation and
+                        contracting will be provided to smoothen relation
+                        development. Highly interested candidates will be
+                        invited to consider learning more about the ease of
+                        doing business in Bangladesh and invited to join in the
+                        physical trademission.
+                      </li>
+                      <li>
+                        The physical trademission, on the basis we have acquired
+                        enough interest, will bring a group of C-Level investors
+                        and directors of companies from the ICT - Creative
+                        industry to Bangladesh for a 4 to 5 day tour, during
+                        which a program is held with local companies,
+                        governmental institutions, and universities.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="video-thumb relative">
+              <img class="w-full h-full" src="images/video-thumb.jpg" alt="" />
+              <img
+                class="
+                  absolute
+                  top-1/2
+                  left-1/2
+                  transform
+                  -translate-x-1/2 -translate-y-1/2
+                "
+                src="images/play_button.png"
+                alt=""
+              />
+            </div>
+
+            <h3 class="font-head font-semibold text-xl text-center my-8">
+              Supported by
+            </h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 flex-wrap">
+              <img
+                class="w-24 lg:w-32 2xl:w-64"
+                src="images/basis.png"
+                alt=""
+              />
+              <img class="w-24 lg:w-auto" src="images/mofa.png" alt="" />
+              <img class="w-24 lg:w-auto" src="images/a2i.png" alt="" />
+              <img class="w-24 lg:w-auto" src="images/lict.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About end -->
+
+    <!-- Contact start -->
+    <section class="contact-area relative mt-16">
+      <div class="top-image"></div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="contact-content py-32 lg:py-44 md:w-3/5">
+            <h2 class="font-head font-semibold text-base lg:text-2xl max-w-md">
+              Trademission will be hosted by and.. ect probably dates planned
+              Date 1 Date 2, schedule emirates flight plan, hosting, sessions,
+              education institutes ease of doing business ect.
+            </h2>
+          </div>
+
+          <div
+            class="
+              form-wrapper
+              md:w-2/5
+              flex
+              justify-center
+              items-start
+              flex-col
+            "
+          >
+            <div class="max-w-md mx-auto p-4">
+              <h3
+                class="
+                  font-head font-semibold
+                  text-xl
+                  lg:text-3xl
+                  mb-2
+                  uppercase
+                "
+              >
+                Keep Me Updated
+              </h3>
+              <p class="font-body font-light text-sm text-gray-400 mb-6">
+                Subscribe to our MailChimp newsletter and stay up to date with
+                all events coming straight in your mailbox:
+              </p>
+              <form action="#">
+                <input
+                  type="text"
+                  class="
+                    rounded-none
+                    w-full
+                    bg-white
+                    mb-4
+                    px-4
+                    py-2
+                    font-body
+                    text-gray-500
+                    focus:outline-none
+                  "
+                  name="fullname"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  type="email"
+                  class="
+                    rounded-none
+                    w-full
+                    bg-white
+                    mb-4
+                    px-4
+                    py-2
+                    font-body
+                    text-gray-500
+                    focus:outline-none
+                  "
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+                <button
+                  class="
+                    transition
+                    flex
+                    justify-center
+                    items-center
+                    mx-auto
+                    px-12
+                    py-2
+                    font-head
+                  "
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact end -->
+
+    <!-- Footer start -->
+    <footer class="footer">
+      <div class="container mx-auto px-4">
+        <ul
+          class="
+            q-links
+            flex
+            justify-between
+            items-center
+            uppercase
+            max-w-xl
+            mx-auto
+            pt-8
+            font-head
+          "
+        >
+          <li><a href="#">About</a></li>
+          <li><a href="#">Planning</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Advisors</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+        <div
+          class="
+            grid grid-cols-2
+            md:grid-cols-4
+            gap-4
+            lg:gap-10 lg:max-w-6xl lg:mx-auto
+            py-4
+            lg:py-11
+            place-items-center
+          "
+        >
+          <img class="w-24 lg:w-32" src="images/basis.png" alt="basis" />
+          <img class="w-24 lg:w-32" src="images/mofa.png" alt="MOFA" />
+          <img
+            class="w-24 lg:w-32"
+            src="images/nl_embassy.png"
+            alt="NL Embassy"
+          />
+          <img
+            class="w-24 lg:w-32"
+            src="images/bd_embassy.png"
+            alt="BD Embassy"
+          />
+        </div>
+        <hr />
+        <p
+          class="
+            text-center text-gray-500 text-xs
+            lg:text-sm
+            font-light font-body
+            my-3
+            lg:my-5
+          "
+        >
+          This site is supported and developed by PlanetNine Trademission
+        </p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <script src="js/alpinejs.min.js" defer></script>
+  </body>
+</html>
